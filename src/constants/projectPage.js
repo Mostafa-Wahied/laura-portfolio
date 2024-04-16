@@ -3,7 +3,7 @@ import takenoteBanner from "../assets/takenoteBanner.png";
 // import takenoteOpportunity from "../assets/takenoteOpportunity.png";
 import pathwaysBanner from "../assets/pathwaysBanner.png";
 // import pathwaysLogo from "../assets/pathwaysLogo.png";
-// import pathwaysOpportunity from "../assets/pathwaysOpportunity.png";
+import pathwaysOpportunity from "../assets/pathwaysOpportunity.jpg";
 import alightBanner from "../assets/alightBanner.png";
 import alightLogo from "../assets/alight.png";
 // import alightOpportunity from "../assets/alightOpportunity.png";
@@ -69,7 +69,7 @@ export const projectPage = {
       part3:
         "The result is Pathways, a mobile app that guides refugees through their journeys, empowering them with the information to build meaningful connections wherever their journey takes them.",
     },
-    opportunityImage: "",
+    opportunityImage: pathwaysOpportunity,
     slug: "pathways",
   },
   alight: {
