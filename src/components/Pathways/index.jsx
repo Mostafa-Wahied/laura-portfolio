@@ -9,6 +9,7 @@ import {
   fadeInUpVariant,
   fadeInPlaceVariant,
 } from "../../utils/motion.js";
+import Carousel from "../Carousel/Carousel.jsx";
 
 const Pathways = () => {
   return (
@@ -536,7 +537,30 @@ const Pathways = () => {
         }}
       >
         {/* carousel */}
-        Carousel
+        {/* <Container // a container for the challenge and opportunity
+          sx={{
+            paddingX: { xs: 2, md: 10 },
+            marginY: 5,
+          }}
+          maxWidth="xl"
+        > */}
+          <Typography
+            variant="h4"
+            sx={{
+              py: 3,
+              // center the text
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontSize: "1.3rem",
+              fontWeight: "bold",
+              mb: 4,
+            }}
+          >
+            Research & Discovery
+          </Typography>
+        {/* </Container> */}
+        <Carousel />
       </Box>
     </>
   );
