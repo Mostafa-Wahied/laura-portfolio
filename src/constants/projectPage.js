@@ -7,6 +7,9 @@ import pathwaysOpportunity from "../assets/pathwaysOpportunity.jpg";
 import alightBanner from "../assets/alightBanner.png";
 import alightLogo from "../assets/alight.png";
 // import alightOpportunity from "../assets/alightOpportunity.png";
+import galleryImage1 from "../assets/pathwaysGalleryImage1.png";
+import galleryImage2 from "../assets/pathwaysGalleryImage2.jpg";
+import galleryImage3 from "../assets/pathwaysGalleryImage3.png";
 
 export const projectPage = {
   takenote: {
@@ -70,6 +73,12 @@ export const projectPage = {
         "The result is Pathways, a mobile app that guides refugees through their journeys, empowering them with the information to build meaningful connections wherever their journey takes them.",
     },
     opportunityImage: pathwaysOpportunity,
+    ImageGalleryImages: [
+      { src: galleryImage1, alt: "Gallery Image 1" },
+      { src: galleryImage2, alt: "Gallery Image 2" },
+      { src: galleryImage3, alt: "Gallery Image 3" },
+
+    ],
     slug: "pathways",
   },
   alight: {

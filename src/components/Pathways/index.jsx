@@ -10,8 +10,10 @@ import {
   fadeInPlaceVariant,
 } from "../../utils/motion.js";
 import Carousel from "../Carousel/Carousel.jsx";
+import ImageGallery from "../ImageGallery/index.jsx";
 
 const Pathways = () => {
+  // console.log(projectPage.pathways.ImageGalleryImages);
   return (
     <>
       <Box
@@ -533,7 +535,7 @@ const Pathways = () => {
         sx={{
           backgroundColor: "#E1CCBE",
           padding: "1rem",
-          marginTop: "2rem",
+          my: "2rem",
         }}
       >
         {/* carousel */}
@@ -544,24 +546,132 @@ const Pathways = () => {
           }}
           maxWidth="xl"
         > */}
-          <Typography
-            variant="h4"
-            sx={{
-              py: 3,
-              // center the text
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              fontSize: "1.3rem",
-              fontWeight: "bold",
-              mb: 4,
-            }}
-          >
-            Research & Discovery
-          </Typography>
+        <Typography
+          variant="h4"
+          sx={{
+            py: 3,
+            // center the text
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "1.3rem",
+            fontWeight: "bold",
+            mb: 4,
+          }}
+        >
+          Research & Discovery
+        </Typography>
         {/* </Container> */}
         <Carousel />
+        {/*
+        Human-centered design: A framework for understanding refugee journeys
+Service design offers a holistic framework for <strong>synthesizing the diverse narratives</strong> of refugees interviewed into a cohesive understanding of the refugee experience on the journey into Europe. 
+
+By employing empathetic research methodologies and engaging directly with refugees, I aimed to uncover the <strong>nuanced challenges, aspirations, and needs at each stage of the migration process.</strong> Through this approach, the individual stories of refugees I engaged with were woven together into an overarching set of experiences and insights, illuminating the collective journey of displacement and resettlement. 
+
+Service design facilitates the identification of common pain points and opportunities for intervention, enabling the development of tailored solutions that address the complexities of the refugee experience. By uniting these varied narratives within a comprehensive framework, <strong>service design empowers stakeholders to design more inclusive, responsive, and effective support systems that promote the dignity, well-being, and integration of refugees into European communities.</strong>
+          */}
       </Box>
+
+      <Container // a container for the human-centered design
+        sx={{
+          paddingX: { xs: 2, md: 10 },
+          marginY: 5,
+        }}
+        maxWidth="xl"
+      >
+        <Box // a box for the human-centered design
+          sx={{
+            m: 12,
+          }}
+        >
+          <motion.section // a motion container for the human-centered design
+            variants={staggerContainer(0.2)}
+            // initial="hidden"
+            // animate="show"
+            // whileInView="show"
+            // viewport={{ once: true, amount: 0.25 }}
+          >
+            <motion.div
+              variants={fadeInPlaceVariant}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <Typography
+                variant="h4"
+                sx={{
+                  fontSize: "1.3rem",
+                  fontWeight: "bold",
+                  mb: 4,
+                }}
+              >
+                Human-centered Design: A Framework for Understanding Refugee
+                Journeys
+              </Typography>
+            </motion.div>
+
+            <motion.div
+              variants={fadeInPlaceVariant}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: "1rem",
+                  mb: 2,
+                }}
+              >
+                Service design offers a holistic framework for{" "}
+                <strong>synthesizing the diverse narratives</strong> of refugees
+                interviewed into a cohesive understanding of the refugee
+                experience on the journey into Europe.
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: "1rem",
+                  mb: 2,
+                }}
+              >
+                By employing empathetic research methodologies and engaging
+                directly with refugees, I aimed to uncover the{" "}
+                <strong>
+                  nuanced challenges, aspirations, and needs at each stage of
+                  the migration process.
+                </strong>{" "}
+                Through this approach, the individual stories of refugees I
+                engaged with were woven together into an overarching set of
+                experiences and insights, illuminating the collective journey of
+                displacement and resettlement.
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: "1rem",
+                  mb: 2,
+                }}
+              >
+                Service design facilitates the identification of common pain
+                points and opportunities for intervention, enabling the
+                development of tailored solutions that address the complexities
+                of the refugee experience. By uniting these varied narratives
+                within a comprehensive framework,
+                <strong>
+                  service design empowers stakeholders to design more inclusive,
+                  responsive, and effective support systems that promote the
+                  dignity, well-being, and integration of refugees into European
+                  communities.
+                </strong>
+              </Typography>
+            </motion.div>
+          </motion.section>
+        </Box>
+
+        <ImageGallery images={projectPage.pathways.ImageGalleryImages} />
+      </Container>
     </>
   );
 };
