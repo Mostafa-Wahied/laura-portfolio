@@ -19,32 +19,34 @@ const ProjectCard = ({ title, image, slug }) => {
         "&:hover .MuiCardMedia-root": {
           transform: "scale(1.1)",
         },
+        minWidth: { xs: "100%", md: 300 },
+        minHeight: { xs: "auto", md: 540 },
       }}
     >
-      {/* <Link
+      <Link
         to={`/portfolio/${slug}`}
         style={{ textDecoration: "none", color: "inherit" }}
-      > */}
-      <CardMedia
-        component="img"
-        image={image}
-        alt="project_image"
-        sx={{
-          padding: 1,
-          transition: "transform 0.3s",
-        }}
-      />
-      <CardContent
-        sx={{
-          borderTop: "0.5px solid",
-          borderColor: "rgba(0, 0, 0, 0.1)",
-        }}
       >
-        <Typography gutterBottom variant="h5" component="div">
-          {title}
-        </Typography>
-      </CardContent>
-      {/* </Link> */}
+        <CardMedia
+          component="img"
+          image={image}
+          alt="project_image"
+          sx={{
+            padding: 1,
+            transition: "transform 0.3s",
+          }}
+        />
+        <CardContent
+          sx={{
+            borderTop: "0.5px solid",
+            borderColor: "rgba(0, 0, 0, 0.1)",
+          }}
+        >
+          <Typography gutterBottom variant="h5" component="div">
+            {title}
+          </Typography>
+        </CardContent>
+      </Link>
     </Card>
   );
 };

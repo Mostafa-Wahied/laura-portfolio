@@ -21,13 +21,13 @@ const Header = ({ bgColor = "transparent" }) => {
           />
         </Link>
         <Box sx={{ display: "flex", gap: 2 }}>
-          <Button href="/portfolio" sx={{ color: "text.primary" }}>
+          <Button href="/portfolio" sx={{ color: "text.primary", textTransform: "none" }}>
             Portfolio
           </Button>
-          <Button href="/about" sx={{ color: "text.primary" }}>
+          <Button href="/about" sx={{ color: "text.primary", textTransform: "none" }}>
             About
           </Button>
-          <Button href="/contact" sx={{ color: "text.primary" }}>
+          <Button href="/contact" sx={{ color: "text.primary", textTransform: "none" }}>
             Contact
           </Button>
         </Box>

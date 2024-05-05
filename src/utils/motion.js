@@ -86,3 +86,15 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
     },
   };
 };
+
+//  for staggering
+export const fadeInPlaceVariant = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.5 } },
+};
+
+//  for staggering
+export const fadeInUpVariant = {
+  hidden: { opacity: 0, y: 50 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
