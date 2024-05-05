@@ -15,7 +15,8 @@ const ImageGallery = ({ images }) => {
     <>
       <Box
         sx={{
-          maxWidth: 800,
+          maxWidth: 1200,
+          maxHeight: activeIndex === 1 ? 800 : 550, // Adjust this value as needed
           mx: "auto",
           ".swiper-button-next, .swiper-button-prev": {
             display: "flex",
@@ -56,13 +57,18 @@ const ImageGallery = ({ images }) => {
                 component="img"
                 image={image.src}
                 alt={`Image ${index}`}
-                sx={{ height: 450, width: "100%" }}
+                sx={{
+                  width: "80%", // Adjust this value as needed
+                  // height: "auto", // This will maintain the aspect ratio of the image
+                  objectFit: "contain",
+                  margin: "auto",
+                }}
               />
             </SwiperSlide>
           ))}
         </Swiper>
       </Box>
-      <Box
+      <Box // Thumbnail swiper
         sx={{ width: { xs: "100%", sm: "80%", md: "30%" }, mx: "auto", mt: 2 }}
       >
         <Swiper

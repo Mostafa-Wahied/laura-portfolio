@@ -1,6 +1,6 @@
 import takenote from "../assets/takenoteCover.png";
 import pathways from "../assets/pathwaysCover.png";
-import alight from "../assets/alight.png";
+import alight from "../assets/alight-logo.png";
 
 export const projects = [
   {

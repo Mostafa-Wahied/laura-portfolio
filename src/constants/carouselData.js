@@ -2,8 +2,13 @@ import pathwaysJordanImage from "../assets/pathways-jordan.jpg";
 import pathwaysGreeceImage from "../assets/pathways-greece.jpg";
 import pathwaysSerbiaImage from "../assets/pathways-serbia.jpg";
 import pathwaysGermanyImage from "../assets/pathways-germany.jpg";
+import takenoteCarousel1 from "../assets/takenote-carousel-1.png";
+import takenoteCarousel2 from "../assets/takenote-carousel-2.png";
+import takenoteCarousel3 from "../assets/takenote-carousel-3.png";
+import takenoteCarousel4 from "../assets/takenote-carousel-4.png";
+import takenoteCarousel5 from "../assets/takenote-carousel-5.png";
 
-export const carouselItems = [
+export const pathwaysCarouselItems = [
   {
     id: 1,
     image: pathwaysJordanImage,
@@ -37,5 +42,43 @@ export const carouselItems = [
     title: "Germany",
     description1:
       "Conducted in-depth interviews with leaders of local arts, activism, and social entrepreneurship initiatives in Berlin to gain valuable insights into diverse strategies for facilitating the social integration of asylum seekers.",
+  },
+];
+
+export const takenoteCarouselItems = [
+  {
+    id: 1,
+    image: takenoteCarousel1,
+    title: "NoteTaker",
+    description:
+      "NoteTaker provides notetaking templates for one-on-one and small group modes of instruction. NoteTaker captures teachers’ observations and tracks in-the moment interventions in a streamlined way that enhances teacher-student interactions.",
+  },
+  {
+    id: 2,
+    image: takenoteCarousel2,
+    title: "NoteBook",
+    description:
+      "NoteBook organizes teachers’ notes into data that can be easily organized and shared. By filtering by subject, proficiency level, instructional strategy, or date, teachers can easily track student progress on goals, create instructional groupings, and ensure they’re equitably using instructional time.",
+  },
+  {
+    id: 3,
+    image: takenoteCarousel3,
+    title: "Class Dashboard",
+    description:
+      "The Class Dashboard is a digest of the most important insights about learning across the class. Track how the class is doing over time and get a clear picture of how personalized instruction happens in real-time.",
+  },
+  {
+    id: 4,
+    image: takenoteCarousel4,
+    title: "Student Insights",
+    description:
+      "Track and analyze individual student progress, focusing on individual strengths and areas for improvement over time. Using AI, generate a summary of student learning to share with the family, or write progress reports aligned to the Common Core state standards.",
+  },
+  {
+    id: 5,
+    image: takenoteCarousel5,
+    title: "Strategic Teaching Hub",
+    description:
+      "Growing teacher talent with strategic planning tools. Chart courses, evaluate progress, and adapt to each learner's journey with agility. Use the power of generative AI to develop individualized learning plans aligned to the Common Core state standards.",
   },
 ];

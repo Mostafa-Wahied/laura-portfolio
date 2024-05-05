@@ -8,6 +8,8 @@ import ContactPage from "./pages/ContactPage";
 import PathwaysPage from "./pages/PathwaysPage";
 import AboutPage from "./pages/AboutPage";
 import "./index.css";
+import TakeNotePage from "./pages/TakeNotePage";
+import { AlightPage } from "./pages/AlightPage";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/portfolio" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/portfolio/pathways" element={<PathwaysPage />} />
+        <Route path="/portfolio/takenote" element={<TakeNotePage />} />
+        <Route path="/portfolio/alight" element={<AlightPage />} />
 
         {/* <Route path="/portfolio/:slug" element={<ProjectsPage />} /> */}
       </Routes>

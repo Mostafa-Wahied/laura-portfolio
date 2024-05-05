@@ -19,6 +19,8 @@ const ProjectCard = ({ title, image, slug }) => {
         "&:hover .MuiCardMedia-root": {
           transform: "scale(1.1)",
         },
+        minWidth: { xs: "100%", md: 300 },
+        minHeight: { xs: "auto", md: 540 },
       }}
     >
       <Link

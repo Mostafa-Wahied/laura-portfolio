@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -54,20 +55,26 @@ const Hero = () => {
       >
         I’m passionate about designing innovative, user-centric solutions that
         elevate human experiences. Dedicated to designing for impactful change
-        and creating solutions that resonate with people's needs.
+        and creating solutions that resonate with people's needs.{" "}
+        <span>
+          <Link href="/about" to="/about" style={{ color: "#333" }}>
+            Learn more.
+          </Link>
+        </span>
       </Typography>
       <Button
         href="/portfolio"
         variant="contained"
         sx={{
           bgcolor: "black",
-          ":hover": { bgcolor: "darkgrey" },
-          color: "white",
-          borderRadius: "20px",
-          px: 4,
-          py: 1,
+          ":hover": { bgcolor: "#333" },
+          color: "#E1CCBE",
+          borderRadius: "50px",
+          // px: 4,
+          // py: 1,
+          padding: "20px 80px",
           textTransform: "none",
-          fontWeight: "bold",
+          fontWeight: "200",
         }}
       >
         Portfolio

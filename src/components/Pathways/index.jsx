@@ -9,8 +9,9 @@ import {
   fadeInUpVariant,
   fadeInPlaceVariant,
 } from "../../utils/motion.js";
-import Carousel from "../Carousel/Carousel.jsx";
+import PathwaysCarousel from "../PathwaysCarousel/PathwaysCarousel.jsx";
 import ImageGallery from "../ImageGallery/index.jsx";
+import { PathwaysInsights } from "../PathwaysInsights/index.jsx";
 
 const Pathways = () => {
   // console.log(projectPage.pathways.ImageGalleryImages);
@@ -20,8 +21,8 @@ const Pathways = () => {
         sx={{
           backgroundImage: `url(${projectPage.pathways.banner})`,
           backgroundSize: "cover",
-          backgroundPosition: "50% 60%",
-          height: "65vh",
+          backgroundPosition: "50% 40%",
+          height: "35vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -30,9 +31,6 @@ const Pathways = () => {
       >
         <motion.section // a motion container for the title and subtitle
           variants={staggerContainer(0.2)}
-          // initial={{ opacity: 0 }}
-          // whileInView={{ opacity: 1 }}
-          // viewport={{ once: true, amount: 0.25 }}
         >
           <motion.div variants={fadeIn("", "spring", 0.25, 0.75)}>
             <Box // a container for the title and subtitle
@@ -74,7 +72,7 @@ const Pathways = () => {
       <Container // a container for the challenge and opportunity
         sx={{
           paddingX: { xs: 2, md: 10 },
-          marginY: { xs: 5, md: 15 },
+          marginY: { xs: 5, md: 5 },
         }}
         maxWidth="xl"
       >
@@ -90,10 +88,6 @@ const Pathways = () => {
             >
               <motion.section // a motion container for the challenge
                 variants={staggerContainer(0.2)}
-                // initial="hidden"
-                // animate="show"
-                // whileInView="show"
-                // viewport={{ once: true, amount: 0.25 }}
               >
                 <motion.div
                   variants={fadeInPlaceVariant}
@@ -200,7 +194,10 @@ const Pathways = () => {
               <Box // a container for the details box
                 sx={{
                   backgroundColor: "#E1CCBE",
-                  padding: "1rem",
+                  paddingTop: { xs: "1rem", md: "2rem" },
+                  paddingBottom: { xs: "1rem", md: "1rem" },
+                  paddingLeft: { xs: "1rem", md: "2rem" },
+                  paddingRight: { xs: "0rem", md: "1rem" },
                   marginTop: "2rem",
                   width: "100%",
                   // maxWidth: "350px",
@@ -210,10 +207,6 @@ const Pathways = () => {
                   <Grid item xs={3}>
                     <motion.section // a motion container for the details box labels
                       variants={staggerContainer(0.2)}
-                      // initial="hidden"
-                      // animate="show"
-                      // whileInView="show"
-                      // viewport={{ once: true, amount: 0.25 }}
                     >
                       <motion.div
                         variants={fadeInPlaceVariant}
@@ -310,10 +303,6 @@ const Pathways = () => {
                   <Grid item xs={9}>
                     <motion.section // a motion container for the details box values
                       variants={staggerContainer(0.2)}
-                      // initial="hidden"
-                      // animate="show"
-                      // whileInView="show"
-                      // viewport={{ once: true, amount: 0.25 }}
                     >
                       <motion.div
                         variants={fadeInPlaceVariant}
@@ -474,23 +463,6 @@ const Pathways = () => {
                     {projectPage.pathways.opportunity.part2}
                   </Typography>
                 </motion.div>
-
-                <motion.div
-                  variants={fadeInPlaceVariant}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true, amount: 0.5 }}
-                >
-                  <Typography
-                    variant="body1"
-                    sx={{
-                      fontSize: "1rem",
-                      mb: 2,
-                    }}
-                  >
-                    {projectPage.pathways.opportunity.part3}
-                  </Typography>
-                </motion.div>
               </motion.section>
             </Box>
           </Grid>
@@ -539,38 +511,30 @@ const Pathways = () => {
         }}
       >
         {/* carousel */}
-        {/* <Container // a container for the challenge and opportunity
+        <Container
           sx={{
             paddingX: { xs: 2, md: 10 },
             marginY: 5,
           }}
           maxWidth="xl"
-        > */}
-        <Typography
-          variant="h4"
-          sx={{
-            py: 3,
-            // center the text
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            fontSize: "1.3rem",
-            fontWeight: "bold",
-            mb: 4,
-          }}
         >
-          Research & Discovery
-        </Typography>
-        {/* </Container> */}
-        <Carousel />
-        {/*
-        Human-centered design: A framework for understanding refugee journeys
-Service design offers a holistic framework for <strong>synthesizing the diverse narratives</strong> of refugees interviewed into a cohesive understanding of the refugee experience on the journey into Europe. 
-
-By employing empathetic research methodologies and engaging directly with refugees, I aimed to uncover the <strong>nuanced challenges, aspirations, and needs at each stage of the migration process.</strong> Through this approach, the individual stories of refugees I engaged with were woven together into an overarching set of experiences and insights, illuminating the collective journey of displacement and resettlement. 
-
-Service design facilitates the identification of common pain points and opportunities for intervention, enabling the development of tailored solutions that address the complexities of the refugee experience. By uniting these varied narratives within a comprehensive framework, <strong>service design empowers stakeholders to design more inclusive, responsive, and effective support systems that promote the dignity, well-being, and integration of refugees into European communities.</strong>
-          */}
+          <Typography
+            variant="h4"
+            sx={{
+              py: 3,
+              // center the text
+              display: "flex",
+              // justifyContent: "center",
+              alignItems: "center",
+              fontSize: "1.3rem",
+              fontWeight: "bold",
+              mb: 4,
+            }}
+          >
+            Research & Discovery
+          </Typography>
+        </Container>
+        <PathwaysCarousel />
       </Box>
 
       <Container // a container for the human-centered design
@@ -582,15 +546,13 @@ Service design facilitates the identification of common pain points and opportun
       >
         <Box // a box for the human-centered design
           sx={{
-            m: 12,
+            mx: { xs: 2, md: 6 },
+            mt: { xs: 2, md: 10 },
+            mb: { xs: 2, md: 5 },
           }}
         >
           <motion.section // a motion container for the human-centered design
             variants={staggerContainer(0.2)}
-            // initial="hidden"
-            // animate="show"
-            // whileInView="show"
-            // viewport={{ once: true, amount: 0.25 }}
           >
             <motion.div
               variants={fadeInPlaceVariant}
@@ -625,7 +587,7 @@ Service design facilitates the identification of common pain points and opportun
                 }}
               >
                 Service design offers a holistic framework for{" "}
-                <strong>synthesizing the diverse narratives</strong> of refugees
+                <strong style={{ fontWeight: "800" }}>synthesizing the diverse narratives</strong> of refugees
                 interviewed into a cohesive understanding of the refugee
                 experience on the journey into Europe.
               </Typography>
@@ -638,7 +600,7 @@ Service design facilitates the identification of common pain points and opportun
               >
                 By employing empathetic research methodologies and engaging
                 directly with refugees, I aimed to uncover the{" "}
-                <strong>
+                <strong style={{ fontWeight: "800" }}>
                   nuanced challenges, aspirations, and needs at each stage of
                   the migration process.
                 </strong>{" "}
@@ -658,8 +620,8 @@ Service design facilitates the identification of common pain points and opportun
                 points and opportunities for intervention, enabling the
                 development of tailored solutions that address the complexities
                 of the refugee experience. By uniting these varied narratives
-                within a comprehensive framework,
-                <strong>
+                within a comprehensive framework,{" "}
+                <strong style={{ fontWeight: "800" }}>
                   service design empowers stakeholders to design more inclusive,
                   responsive, and effective support systems that promote the
                   dignity, well-being, and integration of refugees into European
@@ -672,6 +634,23 @@ Service design facilitates the identification of common pain points and opportun
 
         <ImageGallery images={projectPage.pathways.ImageGalleryImages} />
       </Container>
+      <Box // a box for the insights
+        sx={{
+          backgroundColor: "#E1CCBE",
+          padding: "1rem",
+          my: "2rem",
+        }}
+      >
+        <Container // a container for the insights
+          sx={{
+            // paddingX: { xs: 2, md: 10 },
+            marginY: 5,
+          }}
+          // maxWidth="xl"
+        >
+          <PathwaysInsights />
+        </Container>
+      </Box>
     </>
   );
 };
