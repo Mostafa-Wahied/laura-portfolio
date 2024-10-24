@@ -51,7 +51,7 @@ const About = () => {
             </Typography>
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          {/* <Grid item xs={12} md={6}>
             <img
               src={image}
               alt="Laura"
@@ -61,7 +61,7 @@ const About = () => {
                 borderRadius: "1rem",
               }}
             />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </Box>
